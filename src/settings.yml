@@ -31,6 +31,13 @@ oauth_expiry_field_name: ''
 oauth_expiry_strategy: ''
 oauth_fixed_expiry_ms: ''
 custom_fields:
+- keyname: about
+  field_type: author_bio
+  name: À propos
+  category: environment,nature
+  description: Affiche les observations de qualité de l'air des stations Atmo Grand Est sur votre TRMNL.
+  email_address: atmo@inscog.eu
+  github_url: https://github.com/lbonnefond/TRMNL-AtmoEst
 - keyname: pollutant
   field_type: xhrSelect
   name: Polluant
