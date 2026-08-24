@@ -1,4 +1,9 @@
 <div class="layout layout--col">
+
+  {% comment %}
+    OG / medium screens:
+    4 compact graphs in a 2 × 2 grid.
+  {% endcomment %}
   <div class="grid grid--cols-2 gap--small lg:hidden">
 
     {% if full_graph_1_image %}
@@ -50,6 +55,96 @@
     {% endif %}
 
   </div>
+
+  {% comment %}
+    TRMNL X landscape:
+    4 larger graphs in a 2 × 2 grid.
+  {% endcomment %}
+  <div class="hidden lg:grid lg:grid--cols-2 lg:gap--small lg:portrait:hidden">
+
+    {% if full_graph_1_image_x %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ full_graph_1_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ full_graph_1_image_x }}"
+          alt="{{ full_graph_1_title }}">
+      </div>
+    {% endif %}
+
+    {% if full_graph_2_image_x %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ full_graph_2_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ full_graph_2_image_x }}"
+          alt="{{ full_graph_2_title }}">
+      </div>
+    {% endif %}
+
+    {% if full_graph_3_image_x %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ full_graph_3_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ full_graph_3_image_x }}"
+          alt="{{ full_graph_3_title }}">
+      </div>
+    {% endif %}
+
+    {% if full_graph_4_image_x %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ full_graph_4_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ full_graph_4_image_x }}"
+          alt="{{ full_graph_4_title }}">
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% comment %}
+    TRMNL X portrait:
+    selected pollutant + one secondary pollutant,
+    stacked vertically.
+  {% endcomment %}
+  <div class="hidden lg:portrait:flex lg:portrait:flex--col lg:portrait:gap--small">
+
+    {% if pair_graph_1_image_x_portrait %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ pair_graph_1_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ pair_graph_1_image_x_portrait }}"
+          alt="{{ pair_graph_1_title }}">
+      </div>
+    {% endif %}
+
+    {% if pair_graph_2_image_x_portrait %}
+      <div class="flex flex--col">
+        <span class="label text--center">
+          {{ pair_graph_2_title }}
+        </span>
+        <img
+          class="image image--contain image-dither"
+          src="{{ pair_graph_2_image_x_portrait }}"
+          alt="{{ pair_graph_2_title }}">
+      </div>
+    {% endif %}
+
+  </div>
+
 </div>
 
 <div class="title_bar">
