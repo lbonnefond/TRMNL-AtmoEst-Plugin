@@ -1,19 +1,120 @@
-{% if graph_full %}
-  <div class="layout layout--col">
-    <img
-      class="image image--contain image-dither"
-      src="{{ graph_full }}"
-      alt="{{ air_quality_title }}">
-  </div>
-{% else %}
-  <div class="layout layout--col">
-    <div class="stretch-x stretch-y">
-      <span class="label">
-        {{ message | default: "Unable to retrieve Atmo Grand Est data" }}
-      </span>
+{% comment %}
+  TRMNL OG / medium screens:
+  4 compact graphs in a 2 × 2 grid.
+{% endcomment %}
+<div class="grid grid--cols-2 gap--small lg:hidden">
+  {% if full_graph_1_image %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_1_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_1_image }}"
+        alt="{{ full_graph_1_title }}">
     </div>
-  </div>
-{% endif %}
+  {% endif %}
+
+  {% if full_graph_2_image %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_2_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_2_image }}"
+        alt="{{ full_graph_2_title }}">
+    </div>
+  {% endif %}
+
+  {% if full_graph_3_image %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_3_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_3_image }}"
+        alt="{{ full_graph_3_title }}">
+    </div>
+  {% endif %}
+
+  {% if full_graph_4_image %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_4_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_4_image }}"
+        alt="{{ full_graph_4_title }}">
+    </div>
+  {% endif %}
+</div>
+
+{% comment %}
+  TRMNL X landscape:
+  4 larger graphs in a 2 × 2 grid.
+{% endcomment %}
+<div class="hidden lg:grid lg:grid--cols-2 lg:gap--small lg:portrait:hidden">
+  {% if full_graph_1_image_x %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_1_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_1_image_x }}"
+        alt="{{ full_graph_1_title }}">
+    </div>
+  {% endif %}
+
+  {% if full_graph_2_image_x %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_2_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_2_image_x }}"
+        alt="{{ full_graph_2_title }}">
+    </div>
+  {% endif %}
+
+  {% if full_graph_3_image_x %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_3_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_3_image_x }}"
+        alt="{{ full_graph_3_title }}">
+    </div>
+  {% endif %}
+
+  {% if full_graph_4_image_x %}
+    <div class="layout layout--col">
+      <span class="label">{{ full_graph_4_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ full_graph_4_image_x }}"
+        alt="{{ full_graph_4_title }}">
+    </div>
+  {% endif %}
+</div>
+
+{% comment %}
+  TRMNL X portrait:
+  selected pollutant + one secondary pollutant.
+{% endcomment %}
+<div class="hidden lg:portrait:flex lg:portrait:flex--col lg:portrait:gap--small">
+  {% if pair_graph_1_image_x_portrait %}
+    <div class="layout layout--col">
+      <span class="label">{{ pair_graph_1_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_1_image_x_portrait }}"
+        alt="{{ pair_graph_1_title }}">
+    </div>
+  {% endif %}
+
+  {% if pair_graph_2_image_x_portrait %}
+    <div class="layout layout--col">
+      <span class="label">{{ pair_graph_2_title }}</span>
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_2_image_x_portrait }}"
+        alt="{{ pair_graph_2_title }}">
+    </div>
+  {% endif %}
+</div>
 
 <div class="title_bar">
   <span class="title">
@@ -21,6 +122,6 @@
   </span>
 
   <span class="instance">
-    {{ air_quality_title }}
+    {{ station }}
   </span>
 </div>
