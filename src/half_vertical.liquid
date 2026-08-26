@@ -1,22 +1,28 @@
-{% if graph_half_vertical %}
-  <div class="layout layout--col">
-    <img
-      class="image image--contain image-dither"
-      src="{{ graph_half_vertical }}"
-      alt="{{ air_quality_title }}">
+<div class="layout">
+  <div class="flex flex--col gap--small pb--small mt--3">
+
+    {% if pair_graph_1_image_x_portrait %}
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_1_image_x_portrait }}"
+        alt="{{ pair_graph_1_title }}">
+    {% endif %}
+
+    {% if pair_graph_2_image_x_portrait %}
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_2_image_x_portrait }}"
+        alt="{{ pair_graph_2_title }}">
+    {% endif %}
+
   </div>
-{% else %}
-  <div class="layout layout--col">
-    <div class="stretch-x stretch-y">
-      <span class="label">
-        {{ message | default: "Unable to retrieve Atmo Grand Est data" }}
-      </span>
-    </div>
-  </div>
-{% endif %}
+</div>
 
 <div class="title_bar">
   <span class="title">
-    {{ air_quality_title }}
+    {{ pair_graph_1_title }} / {{ pair_graph_2_title }}
+  </span>
+  <span class="instance">
+    {{ station }}
   </span>
 </div>
