@@ -1,16 +1,16 @@
-<div class="layout pt--3 pb--3">
+<div class="layout">
 
   <!-- OG -->
-  <div class="lg:hidden w--full h--full">
+  <div class="lg:hidden h--[100cqh]">
     {% if image_quadrant %}
       <img
-        class="image image--contain image-dither"
+        class="image image--contain image-dither w--full h--full"
         src="{{ image_quadrant }}"
         alt="{{ air_quality_title }}">
     {% endif %}
   </div>
 
-  <!-- X -->
+  <!-- X : ne pas modifier -->
   <div class="hidden lg:block w--full h--full">
     {% if graph_quadrant_x %}
       <img
