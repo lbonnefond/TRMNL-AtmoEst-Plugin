@@ -1,6 +1,24 @@
 <div class="layout">
-  <div class="flex flex--col gap--small pb--small mt--3">
 
+  <!-- OG -->
+  <div class="flex flex--col gap--small pb--small mt--3 lg:hidden">
+    {% if pair_graph_1_image %}
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_1_image }}"
+        alt="{{ pair_graph_1_title }}">
+    {% endif %}
+
+    {% if pair_graph_2_image %}
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_2_image }}"
+        alt="{{ pair_graph_2_title }}">
+    {% endif %}
+  </div>
+
+  <!-- X portrait -->
+  <div class="hidden lg:portrait:flex lg:portrait:flex--col lg:portrait:gap--small">
     {% if pair_graph_1_image_x_half_vertical %}
       <img
         class="image image--contain image-dither"
@@ -14,8 +32,8 @@
         src="{{ pair_graph_2_image_x_half_vertical }}"
         alt="{{ pair_graph_2_title }}">
     {% endif %}
-
   </div>
+
 </div>
 
 <div class="title_bar">
