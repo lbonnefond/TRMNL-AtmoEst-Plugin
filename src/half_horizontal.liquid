@@ -1,14 +1,13 @@
 <div class="layout">
 
   <!-- OG -->
-  <div class="grid grid--cols-2 mt--3 lg:hidden">
+  <div class="grid grid--cols-2 gap--small pb--small mt--3 lg:hidden">
     {% if pair_graph_1_image %}
       <img
         class="image image--contain image-dither"
         src="{{ pair_graph_1_image }}"
         alt="{{ pair_graph_1_title }}">
     {% endif %}
-
     {% if pair_graph_2_image %}
       <img
         class="image image--contain image-dither"
@@ -20,17 +19,20 @@
   <!-- X landscape -->
   <div class="hidden lg:grid lg:grid--cols-2 lg:gap--small lg:portrait:hidden">
     {% if pair_graph_1_image_x %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_1_image_x }}"
-        alt="{{ pair_graph_1_title }}">
+      <div class="w--[48cqw]">
+        <img
+          class="image image--contain image-dither"
+          src="{{ pair_graph_1_image_x }}"
+          alt="{{ pair_graph_1_title }}">
+      </div>
     {% endif %}
-
     {% if pair_graph_2_image_x %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_2_image_x }}"
-        alt="{{ pair_graph_2_title }}">
+      <div class="w--[48cqw]">
+        <img
+          class="image image--contain image-dither"
+          src="{{ pair_graph_2_image_x }}"
+          alt="{{ pair_graph_2_title }}">
+      </div>
     {% endif %}
   </div>
 
