@@ -1,16 +1,17 @@
-<!-- OG -->
-<div class="layout layout--col pt--5 lg:hidden">
-  {% if graph_quadrant %}
-    <img
-      class="image image--contain image-dither"
-      src="{{ graph_quadrant }}"
-      alt="{{ air_quality_title }}">
-  {% endif %}
-</div>
+<div class="layout">
 
-<!-- X -->
-<div class="hidden lg:block">
-  <div class="layout layout--col pt--5">
+  <!-- OG -->
+  <div class="lg:hidden w--full h--full">
+    {% if image_quadrant %}
+      <img
+        class="image image--contain image-dither"
+        src="{{ image_quadrant }}"
+        alt="{{ air_quality_title }}">
+    {% endif %}
+  </div>
+
+  <!-- X -->
+  <div class="hidden lg:block w--full h--full">
     {% if graph_quadrant_x %}
       <img
         class="image image--contain image-dither"
@@ -18,6 +19,7 @@
         alt="{{ air_quality_title }}">
     {% endif %}
   </div>
+
 </div>
 
 <div class="title_bar">
