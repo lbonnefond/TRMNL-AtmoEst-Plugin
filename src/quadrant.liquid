@@ -1,32 +1,28 @@
-<div class="layout">
+<!-- OG -->
+<div class="layout layout--col pt--5 lg:hidden">
+  {% if graph_quadrant %}
+    <img
+      class="image image--contain image-dither"
+      src="{{ graph_quadrant }}"
+      alt="{{ air_quality_title }}">
+  {% endif %}
+</div>
 
-  <!-- OG -->
-  <div class="layout layout--col pt--5 lg:hidden">
-    {% if image_quadrant %}
+<!-- X -->
+<div class="hidden lg:block">
+  <div class="layout layout--col pt--5">
+    {% if graph_quadrant_x %}
       <img
         class="image image--contain image-dither"
-        src="{{ image_quadrant }}"
+        src="{{ graph_quadrant_x }}"
         alt="{{ air_quality_title }}">
     {% endif %}
   </div>
-
-  <!-- X -->
-  <div class="hidden lg:block">
-    <div class="layout layout--col pt--5">
-      {% if graph_quadrant_x %}
-        <img
-          class="image image--contain image-dither"
-          src="{{ graph_quadrant_x }}"
-          alt="{{ air_quality_title }}">
-      {% endif %}
-    </div>
-  </div>
-
 </div>
 
 <div class="title_bar">
   <span class="title">
-    {{ air_quality_title }}
+    24h Atmo Grand Est
   </span>
   <span class="instance">
     {{ station }}
