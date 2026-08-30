@@ -18,23 +18,19 @@
   </div>
 
   <!-- X portrait -->
-  <div class="hidden lg:portrait:flex lg:portrait:flex--col lg:portrait:gap--small">
+  <div class="hidden lg:flex lg:flex--col portrait:flex--col">
     {% if pair_graph_1_image_x_half_vertical %}
-      <div class="h--[43cqh]">
-        <img
-          class="image image--contain image-dither"
-          src="{{ pair_graph_1_image_x_half_vertical }}"
-          alt="{{ pair_graph_1_title }}">
-      </div>
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_1_image_x_half_vertical }}"
+        alt="{{ pair_graph_1_title }}">
     {% endif %}
 
     {% if pair_graph_2_image_x_half_vertical %}
-      <div class="h--[43cqh]">
-        <img
-          class="image image--contain image-dither"
-          src="{{ pair_graph_2_image_x_half_vertical }}"
-          alt="{{ pair_graph_2_title }}">
-      </div>
+      <img
+        class="image image--contain image-dither"
+        src="{{ pair_graph_2_image_x_half_vertical }}"
+        alt="{{ pair_graph_2_title }}">
     {% endif %}
   </div>
 
@@ -44,7 +40,5 @@
   <span class="title">
     {{ pair_graph_1_key | upcase }} / {{ pair_graph_2_key | upcase }} (µg/m³)
   </span>
-  <span class="instance">
-    {{ station }}
-  </span>
+  <span class="instance">{{ station }}</span>
 </div>
