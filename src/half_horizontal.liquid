@@ -1,46 +1,38 @@
 <div class="layout">
-
   <div class="grid grid--cols-2 gap--small pb--small mt--3 md:w--full lg:hidden">
     {% if pair_graph_1_image %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_1_image }}"
-        alt="{{ pair_graph_1_title }}">
+      <img class="image image--contain image-dither" src="{{ pair_graph_1_image }}" alt="{{ pair_graph_1_title }}">
     {% endif %}
-
     {% if pair_graph_2_image %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_2_image }}"
-        alt="{{ pair_graph_2_title }}">
+      <img class="image image--contain image-dither" src="{{ pair_graph_2_image }}" alt="{{ pair_graph_2_title }}">
     {% endif %}
   </div>
-
   <div class="hidden lg:flex lg:flex--row lg:gap--small">
     {% if pair_graph_1_image_x %}
-      <div class="w--[48cqw]">
-        <img
-          class="image image--contain image-dither w--full"
-          src="{{ pair_graph_1_image_x }}"
-          alt="{{ pair_graph_1_title }}">
+      <div class="w--[50cqw]">
+        <img class="image image--contain image-dither w--full" src="{{ pair_graph_1_image_x }}" alt="{{ pair_graph_1_title }}">
       </div>
     {% endif %}
-
     {% if pair_graph_2_image_x %}
       <div class="w--[48cqw]">
-        <img
-          class="image image--contain image-dither w--full"
-          src="{{ pair_graph_2_image_x }}"
-          alt="{{ pair_graph_2_title }}">
+        <img class="image image--contain image-dither w--full" src="{{ pair_graph_2_image_x }}" alt="{{ pair_graph_2_title }}">
       </div>
     {% endif %}
   </div>
-
 </div>
-
 <div class="title_bar">
   <span class="title">
-    24h Atmo Grand Est · {{ pair_graph_1_title }} / {{ pair_graph_2_title }}
+    
+    
+    24h Atmo Grand Est · 
+    
+    {{ pair_graph_1_title }}
+    
+     / 
+    
+    {{ pair_graph_2_title }}
   </span>
-  <span class="instance">{{ station }}</span>
+  <span class="instance">
+    {{ station }}
+  </span>
 </div>

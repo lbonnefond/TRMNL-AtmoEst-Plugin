@@ -1,50 +1,40 @@
 <div class="layout">
-
-  <!-- OG -->
+  <!--   OG   -->
   <div class="flex flex--col gap--small pb--small mt--3 lg:hidden">
     {% if pair_graph_1_image %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_1_image }}"
-        alt="{{ pair_graph_1_title }}">
+      <img class="image image--contain image-dither" src="{{ pair_graph_1_image }}" alt="{{ pair_graph_1_title }}">
     {% endif %}
-
     {% if pair_graph_2_image %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_2_image }}"
-        alt="{{ pair_graph_2_title }}">
+      <img class="image image--contain image-dither" src="{{ pair_graph_2_image }}" alt="{{ pair_graph_2_title }}">
     {% endif %}
   </div>
-
-  <!-- X portrait -->
+  <!--   X portrait   -->
   <div class="hidden lg:flex lg:flex--col portrait:flex--col lg:gap--small">
-
     {% if pair_graph_1_image_x_half_vertical %}
       <div class="h--[42cqh]">
-        <img
-          class="image image--contain image-dither w--full h--full"
-          src="{{ pair_graph_1_image_x_half_vertical }}"
-          alt="{{ pair_graph_1_title }}">
+        <img class="image image--contain image-dither w--full h--full" src="{{ pair_graph_1_image_x_half_vertical }}" alt="{{ pair_graph_1_title }}">
       </div>
     {% endif %}
-
     {% if pair_graph_2_image_x_half_vertical %}
       <div class="h--[42cqh]">
-        <img
-          class="image image--contain image-dither w--full h--full"
-          src="{{ pair_graph_2_image_x_half_vertical }}"
-          alt="{{ pair_graph_2_title }}">
+        <img class="image image--contain image-dither w--full h--full" src="{{ pair_graph_2_image_x_half_vertical }}" alt="{{ pair_graph_2_title }}">
       </div>
     {% endif %}
-
   </div>
-
 </div>
-
 <div class="title_bar">
   <span class="title">
-    {{ pair_graph_1_key | upcase }} / {{ pair_graph_2_key | upcase }} (µg/m³)
+    {{ pair_graph_1_key | upcase }}
+    
+     / 
+    
+    {{ pair_graph_2_key | upcase }}
+    
+     (µg/m³)
+  
+  
   </span>
-  <span class="instance">{{ station }}</span>
+  <span class="instance">
+    {{ station }}
+  </span>
 </div>
