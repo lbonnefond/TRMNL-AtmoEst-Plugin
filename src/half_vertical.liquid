@@ -18,20 +18,26 @@
   </div>
 
   <!-- X portrait -->
-  <div class="hidden lg:flex lg:flex--col portrait:flex--col">
+  <div class="hidden lg:flex lg:flex--col portrait:flex--col lg:gap--small">
+
     {% if pair_graph_1_image_x_half_vertical %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_1_image_x_half_vertical }}"
-        alt="{{ pair_graph_1_title }}">
+      <div class="h--[42cqh]">
+        <img
+          class="image image--contain image-dither w--full h--full"
+          src="{{ pair_graph_1_image_x_half_vertical }}"
+          alt="{{ pair_graph_1_title }}">
+      </div>
     {% endif %}
 
     {% if pair_graph_2_image_x_half_vertical %}
-      <img
-        class="image image--contain image-dither"
-        src="{{ pair_graph_2_image_x_half_vertical }}"
-        alt="{{ pair_graph_2_title }}">
+      <div class="h--[42cqh]">
+        <img
+          class="image image--contain image-dither w--full h--full"
+          src="{{ pair_graph_2_image_x_half_vertical }}"
+          alt="{{ pair_graph_2_title }}">
+      </div>
     {% endif %}
+
   </div>
 
 </div>
