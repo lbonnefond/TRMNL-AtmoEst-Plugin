@@ -51,6 +51,13 @@ custom_fields:
   endpoint: https://atmo.inscog.eu/stations.php?pollutant={{pollutant}}
   http_verb: GET
   exclude_csrf_token: true
+- keyname: second_pollutant
+  field_type: xhrSelect
+  name: Second polluant
+  depends_on: station
+  endpoint: https://atmo.inscog.eu/pollutants.php?station={{station}}
+  http_verb: GET
+  exclude_csrf_token: true
 name: Atmo Grand Est
 description: 24h air quality from Atmo Grand Est
 refresh_interval: 60
