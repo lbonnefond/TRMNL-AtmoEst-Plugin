@@ -54,8 +54,8 @@ custom_fields:
 - keyname: second_pollutant
   field_type: xhrSelect
   name: Second polluant
-  depends_on: station
-  endpoint: https://atmo.inscog.eu/pollutants.php?station={{station}}
+  depends_on: pollutant
+  endpoint: https://atmo.inscog.eu/pollutants.php?station={{station}}&exclude={{pollutant}}
   http_verb: GET
   exclude_csrf_token: true
 name: Atmo Grand Est
